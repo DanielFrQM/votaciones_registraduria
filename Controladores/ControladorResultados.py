@@ -30,7 +30,7 @@ class ControladorResultados():
         return elResultado.__dict__
 
     def mostrarResultados(self):
-        print("Listar todos los Resultadoss")
+        print("Listar todos los Resultados")
         return self.repositorioResultados.findAll()
 
     def delete(self, id):
