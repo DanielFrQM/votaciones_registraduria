@@ -6,7 +6,7 @@
 Para correr este proyecto localmente debes seguir los siguientes pasos:
 
 ### 1. Clone
-    $ git clone https://github.com/iamjosuefischer/registraduria-backend.git
+    $ git clone https://github.com/DanielFrQM/votaciones_registraduria.git
 
 ### 2. Create enviroment and activate it.
     $ python -m venv env
