@@ -151,6 +151,49 @@ def deleteResultados(id):
     dictResultados = miControladorResultados.delete(id)
     return jsonify(dictResultados)
 
+# listar resultado de candidatos por mesa, ordenados de mayor a menor
+
+@app.route("/resultado/mesa/<string:id_mesa>",methods=['GET'])
+def resultadoMesa(id_mesa):
+    respuesta = miControladorResultados.listarResultadoMesa(id_mesa)
+    return jsonify(respuesta)
+
+# listar resultados de candidatos de todas las mesas
+
+@app.route("/resultado/candida",methods=['GET'])
+def resultadoCandidato():
+    respuesta = miControladorResultados.listarResultados()
+    return jsonify(respuesta)
+
+# listado de las sumas por mesas
+
+@app.route("/resultado/sumamesa",methods=['GET'])
+def resultadoSumamesa():
+    respuesta = miControladorResultados.numerototalpormesa()
+    return jsonify(respuesta)
+
+#resultado de partido general
+
+@app.route("/resultado/partido",methods=['GET'])
+def resultadopartido():
+    respuesta = miControladorResultados.resultadopartido()
+    return jsonify(respuesta)
+
+#opcion de resultado de partidos por mesas
+
+@app.route("/resultado/partidomesa/<string:id_mesa>",methods=['GET'])
+def resultadopartidoMesa(id_mesa):
+    respuesta = miControladorResultados.resultadopartidopormesa(id_mesa)
+    return jsonify(respuesta)
+
+#Porcentaje por partidos creados
+
+@app.route("/resultado/porcentaje",methods=['GET'])
+def resultadoporcentaje():
+    respuesta = miControladorResultados.resultadoporcentajepartido()
+    return jsonify(respuesta)
+
+
 #End Resultados----------------------------------------------
 
 

@@ -17,7 +17,7 @@ class ControladorResultados():
 
 
     def create(self, infoResultados, id_candidato, id_mesa):
-        print("crear Inscripcion")
+        print("crear Resultado")
         crearResultados = Resultados(infoResultados)
         candidato = Candidato(self.repositorioCandidato.findById(id_candidato))
         mesa = Mesa(self.repositorioMesa.findById(id_mesa))
@@ -48,3 +48,22 @@ class ControladorResultados():
         resultado.candidato = candidato
         resultado.materia = mesa
         return self.repositorioResultados.save(resultado)
+
+    def listarResultados(self):
+        return self.repositorioResultados.getListadoResultadocandidato()
+
+    def listarResultadoMesa(self,id_mesa):
+        return self.repositorioResultados.getListadoResultadoporMesa(id_mesa)
+
+    def numerototalpormesa(self):
+        return self.repositorioResultados.getSumademesas()
+
+    def resultadopartido(self):
+        return self.repositorioResultados.getListadoResultadopartidopolitico()
+
+    def resultadopartidopormesa(self,id_mesa):
+        return self.repositorioResultados.getListadoPartidoporMesa(id_mesa)
+
+    def resultadoporcentajepartido(self):
+        return self.repositorioResultados.getListadoporcentajepartidopolitico()
+
