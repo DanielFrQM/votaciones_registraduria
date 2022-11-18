@@ -134,7 +134,7 @@ def crearResultados(id_candidato,id_mesa):
 def getResultado(id):
     dictResultados = miControladorResultados.mostrarResultado(id)
     return jsonify((dictResultados))
-
+#
 @app.route("/resultados",methods=['GET'])
 def getResultados():
     dictResultados = miControladorResultados.mostrarResultados()

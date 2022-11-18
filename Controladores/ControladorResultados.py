@@ -15,6 +15,7 @@ class ControladorResultados():
         self.repositorioMesa = RepositorioMesa()
         print("Creando Controlado de Resultados")
 
+
     def create(self, infoResultados, id_candidato, id_mesa):
         print("crear Inscripcion")
         crearResultados = Resultados(infoResultados)

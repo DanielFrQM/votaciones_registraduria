@@ -2,7 +2,7 @@
   "url-backend": "127.0.0.1",
   "port": 9999,
 
-  "data-db-connection": "mongodb+srv://monkey:Monkey123@cluster0.2xsc4e1.mongodb.net/?retryWrites=true&w=majority",
+  "data-db-connection": "mongodb+srv://daniefrqm:Danielelrey1@cluster0.bxdr7uy.mongodb.net/?retryWrites=true&w=majority",
   "name-db": "bd-votaciones_registraduria"
 }
 

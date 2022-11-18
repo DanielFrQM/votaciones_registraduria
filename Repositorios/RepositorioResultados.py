@@ -3,9 +3,10 @@ from Modelos.Resultados import Resultados
 from bson import ObjectId
 
 class RepositorioResultados(InterfaceRepositorio[Resultados]):
-    def getListResultadosCandidato(self, id_candidato):
-        query = {"Candidato.$id": ObjectId(id_candidato)}
-        return self.query(query)
+    pass
+    # def getListResultadosCandidato(self, id_candidato):
+    #     query = {"Candidato.$id": ObjectId(id_candidato)}
+    #     return self.query(query)
     # def getListadoInscritosEnMateria(self, id_materia):
     #     theQuery = {"materia.$id": ObjectId(id_materia)}
     #     return self.query(theQuery)
